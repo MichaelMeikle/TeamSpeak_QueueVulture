@@ -150,7 +150,7 @@
   <ItemGroup>
     <ClCompile Include="src\log.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\plugin2.cpp" />
+    <ClCompile Include="src\plugin.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

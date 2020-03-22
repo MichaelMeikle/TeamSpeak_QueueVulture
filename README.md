@@ -12,13 +12,16 @@ Note: This plugin is not compatible with MacOS at this time.
 
 Keyword: vulture
 
-lock
+###lock
  - Sets whatever channel you currently have selected in the TS GUI as monitored
  - Defaults to an expected channel client limit of 4
  - Optional 2nd arguement specifies a user defined channel client limit (Takes an int)
-unlock
+ 
+###unlock
  - Clears the set channel lock
-clear
+ 
+###clear
  - Same functionality as unlock
-status
+ 
+###status
  - Gives a readout of currently monitored channel if one exists 

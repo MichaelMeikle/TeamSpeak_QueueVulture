@@ -1,6 +1,6 @@
 # TeamSpeak 3 Queue Vulture Plugin
-Designed by Michael T. Meikle
-Started on 03/22/2020
+ - Designed by Michael T. Meikle
+ - Started on 03/22/2020
 
 ## Getting Started 
 

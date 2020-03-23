@@ -29,7 +29,7 @@ void Vulture::ChangeChannelEvent(uint64 serverConnectionHandlerID, anyID clientI
 			ts3()->getChannelClientList(serverConnectionHandlerID, locked_channel_id_, &client_list);
 			int i = 0;
 			while (client_list[i]) i++;
-			if (i < client_count_max_)
+			if (i < client_count_max_ || client_count_max_ == -1)
 			{
 				ts3()->requestClientMove(server_id_, my_id, locked_channel_id_, "", NULL);
 				console_->PrintMsg(serverConnectionHandlerID, "User left watched channel, vultching initiated", PLUGIN_MESSAGE_TARGET_CHANNEL);
@@ -72,17 +72,25 @@ void Vulture::CommandEvent(uint64 serverConnectionHandlerID, std::string command
 		{
 			lock_set_ = true;
 			locked_channel_id_ = selected_item_id_;
-			try {
-				if (args.size() >= 2)
-					client_count_max_ = std::stoi(args[1]);
-				else
-					throw std::exception();
-			}
-			catch (const std::exception& e)
+			int result = 4;
+			if (args.size() <= 1)
 			{
-				console_->PrintMsg(serverConnectionHandlerID, "Count defaulted to 4", PLUGIN_MESSAGE_TARGET_CHANNEL);
-				client_count_max_ = 4;
+				ts3()->getChannelVariableAsInt(serverConnectionHandlerID, selected_item_id_, CHANNEL_MAXCLIENTS, &result);
+				client_count_max_ = result;
 			}
+			else
+			{
+				try 
+				{
+					client_count_max_ = std::stoi(args[1]);
+				}
+				catch (const std::exception & e)
+				{
+					console_->PrintMsg(serverConnectionHandlerID, "[color=red]Invalid 2nd client arguement[/color]", PLUGIN_MESSAGE_TARGET_CHANNEL);
+					client_count_max_ = result;
+				}
+			}
+
 			server_id_ = serverConnectionHandlerID;
 			console_->PrintMsg(serverConnectionHandlerID, "Channel lock set to " + std::to_string(locked_channel_id_) + " with max client count of " + std::to_string(client_count_max_), PLUGIN_MESSAGE_TARGET_CHANNEL);
 			ChangeChannelEvent(serverConnectionHandlerID, -1, locked_channel_id_, 0, true, nullptr);

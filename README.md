@@ -14,7 +14,7 @@ Keyword: vulture
 
 lock
  - Sets whatever channel you currently have selected in the TS GUI as monitored
- - Defaults to an expected channel client limit of 4
+ - Defaults to MAXCLIENTS channel variable
  - Optional 2nd arguement specifies a user defined channel client limit (Takes an int)
  
 unlock

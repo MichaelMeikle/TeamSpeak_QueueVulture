@@ -14,7 +14,6 @@ public:
 	Vulture();
 	void ChangeChannelEvent(uint64 serverConnectionHandlerID, anyID clientID, uint64 oldChannelID, uint64 newChannelID, int visibility, const char* moveMessage);
 	void CommandEvent(uint64 serverConnectionHandlerID, std::string command);
-	void ResetLock();
 	void set_selected_item(uint64 item_id) { selected_item_id_ = item_id; }
 private:
 	std::unique_ptr<Log> console_;

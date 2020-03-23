@@ -11,7 +11,7 @@
 #include "ts3_functions.h"
 #include "plugin.h"
 
-#define PLUGIN_API_VERSION 23
+#define PLUGIN_API_VERSION 24
 
 #define PATH_BUFSIZE 512
 #define COMMAND_BUFSIZE 128

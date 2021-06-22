@@ -1,7 +1,10 @@
 # TeamSpeak 3 Queue Vulture Plugin
  - Designed by Michael T. Meikle
  - Started on 03/22/2020
-
+ 
+ ## Purpose
+ Originally developed for use in the Department of Justice Roleplay (DOJRP) FiveM community. Designed to make grabbing TeamSpeak queue spots incredibly easy without having to monitor the channel while nearly always beating everyone else to get the spot thanks to the speed of the script. Decided to release this for public consumption/alteration.
+ 
 ## Getting Started 
 
 Install queue_vulture_(platform).dll into your %appdata%/TS3Client/plugins folder

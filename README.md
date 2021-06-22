@@ -3,7 +3,7 @@
  - Started on 03/22/2020
  
  ## Purpose
- Originally developed for use in the Department of Justice Roleplay (DOJRP) FiveM community. Designed to make grabbing TeamSpeak queue spots incredibly easy without having to monitor the channel and allows the user to nearly always beat everyone else to get the spot thanks to the speed of the script. Decided to release this for public consumption/alteration.
+ Originally developed for use in the Department of Justice Roleplay (DOJRP) FiveM community. Designed to make grabbing TeamSpeak queue spots incredibly easy without having to monitor the channel and allows the user to nearly always beat everyone else to get the spot thanks to the speed of the script. Decided to release this for public consumption.
  
 ## Getting Started 
 

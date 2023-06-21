@@ -5,7 +5,7 @@
 std::string Vulture::kPluginName = "TS Queue Vulture";
 std::string Vulture::kPluginAuthor = "Michael Meikle";
 std::string Vulture::kPluginDescription = "Queue snatcher script";
-std::string Vulture::kPluginVersion = "0.0.1";
+std::string Vulture::kPluginVersion = "0.0.2";
 
 Vulture::Vulture()
 {
